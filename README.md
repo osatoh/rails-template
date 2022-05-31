@@ -1,12 +1,12 @@
-# devcontainer for Ruby on Rails 6.1
+# devcontainer for Ruby on Rails 7.0 + tailwind + rspec
 
-Ruby on Rails 6.1 の開発環境用の [devcontainer](https://code.visualstudio.com/docs/remote/containers)
+Ruby on Rails 7.0 の開発環境用の [devcontainer](https://code.visualstudio.com/docs/remote/containers)
 
 ## 構成
 
 docker compose で構成
 
-- app: [ruby:2.7.6-bullseye](https://hub.docker.com/_/ruby)
+- app: [ruby:3.1.2](https://hub.docker.com/_/ruby)
 - postgres: [postgres:14](https://hub.docker.com/_/postgres)
 
 ### 機能
@@ -16,51 +16,49 @@ docker compose で構成
   - ERB: [erb-formatter](https://github.com/nebulab/erb-formatter)
   - HTML, CSS, JS: [Prettier](https://prettier.io/)
 - Intellisense: [solargraph](https://github.com/castwide/solargraph)
-- debugger: [ruby-debug-ide](https://github.com/ruby-debug/ruby-debug-ide), [debase](https://github.com/ruby-debug/debase)
 
-## devcontainerの利用方法
+## devcontainer の利用方法
+
 ※ devcontainer に必要なツールのインストールは[こちら](https://code.visualstudio.com/docs/remote/containers#_installation)
-
 
 ### このリポジトリを新規プロジェクトで利用する場合
 
-1. VSCodeを開き、 `Reopen in Container` を実行す
+1. VSCode を開き、 `Reopen in Container` を実行す
 
 ### 既存のプロジェクトで利用する場合
+
 1. このリポジトリをダウンロードし、任意のプロジェクトに以下をコピーする
+
 - [docker-compose.yml](docker-compose.yml)
 - [docker/app/Dockerfile](docker/app/Dockerfile)
 - [.devcontainer](.devcontainer)
 - [.vscode](.vscode)
 
-2. VSCodeを開き、 `Reopen in Container` を実行する
+2. VSCode を開き、 `Reopen in Container` を実行する
 
 ## サーバーの立ち上げ方
 
-#### devcontainer上で、コマンドを実行する
+#### devcontainer 上で、コマンドを実行する
+
 ```bash
-$ bin/rails s
+$ dev
 ```
 
-#### devcontainer上で、 `デバッグを実行` を実行する(ショートカットキー: F5)
+## docker compose のみで実行する場合
 
-`デバッグを実行` を利用すると[VSCode Debugging](https://code.visualstudio.com/docs/editor/debugging)が利用可能
-
-> デバッグを実行するためには `ruby-debug-ide` , `debase` gem のインストールが必要
-
-## docker composeのみで実行する場合
-VSCode以外の環境で開発する場合は、docker composeを利用することができる。 [Makefile](Makefile) コマンドが用意されている。各コマンドはHost OS上で実行する。
+VSCode 以外の環境で開発する場合は、docker compose を利用することができる。 [Makefile](Makefile) コマンドが用意されている。各コマンドは Host OS 上で実行する。
 
 #### 初回構築
+
 ```
 $ make build
 ```
 
 #### サーバーを起動する
+
 ```
 $ make serve
 ```
-
 
 ## VSCode extensions
 
@@ -80,3 +78,4 @@ $ make serve
 - [Visual Studio Code Doc - Developing inside a Container](https://code.visualstudio.com/docs/remote/containers)
 - [VS Code Solargraph Extension](https://github.com/castwide/vscode-solargraph)
 - [vscode-ruby debugger](https://github.com/rubyide/vscode-ruby/blob/main/docs/debugger.md)
+- [saboyutaka/rails\-devcontainer](https://github.com/saboyutaka/rails-devcontainer)
