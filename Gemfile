@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
 
-gem "rails"
+gem "rails", "~> 7.0.0"
 gem "pg"
 gem "puma"
 gem "sass-rails"
@@ -40,6 +40,7 @@ end
 
 group :development, :test do
   gem "debug"
+  gem "rspec-rails"
   # gem "ruby-debug-ide"
   # gem "debase"
 end
