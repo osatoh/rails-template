@@ -306,7 +306,7 @@ DEPENDENCIES
   net-smtp
   pg
   puma
-  rails (~> 6.1.5, >= 6.1.5.1)
+  rails
   rufo
   sass-rails
   selenium-webdriver
