@@ -281,6 +281,10 @@ GEM
       unicode_utils (~> 1.4)
     strings-ansi (0.2.0)
     strscan (3.0.3)
+    tailwindcss-rails (2.0.8-aarch64-linux)
+      railties (>= 6.0.0)
+    tailwindcss-rails (2.0.8-x86_64-linux)
+      railties (>= 6.0.0)
     thor (1.2.1)
     tilt (2.0.10)
     timeout (0.3.0)
@@ -345,6 +349,7 @@ DEPENDENCIES
   selenium-webdriver
   solargraph
   spring
+  tailwindcss-rails (~> 2.0)
   turbolinks
   tzinfo-data
   web-console
