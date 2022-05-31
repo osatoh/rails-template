@@ -23,7 +23,8 @@
     "hridoy.rails-snippets",
     "kaiwood.endwise",
     "VisualStudioExptTeam.vscodeintellicode",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "koichisasada.vscode-rdbg"
   ],
   "initializeCommand": "if ! [ -f .env ];then cp .env.sample .env;fi",
   "postCreateCommand": "bundle install --path vendor/bundle",
